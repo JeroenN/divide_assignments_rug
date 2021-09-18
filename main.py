@@ -8,7 +8,7 @@ import random
 # The program zips all the files for every submission and then it divides those assignments among the graders
 # You can download all files in the grade center
 
-# Give the directory where the assignments are stored
+# Input the directory where the assignments are stored
 dir = ''
 
 graders = [
@@ -43,11 +43,11 @@ def extract_unique_s_numbers(files):
 
     return unique_s_numbers
 
-# Not entirely sure how this works, could use some documentation
+# Creates new folders a  for each grader and in those folders the assignments will be equally divided
 def divide_assignments():
-    #
+    # The folder in which all the zipped assignments are, in this folder new folders will be created for each
+    # grader and in those folders the assignments will be equaly divided
     target_folder = dir + "/assignments_divided"
-    ALLOWED_FILETYPES = ['zip']
 
     filenames = []
     for filetype in 'zip':
