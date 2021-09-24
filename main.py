@@ -9,7 +9,7 @@ import random
 # You can download all files in the grade center
 
 # Input the directory where the assignments are stored
-dir = ''
+dir = 'C:/Users/mathi/lst'
 
 graders = [
     'Jeroen',
@@ -48,15 +48,16 @@ def divide_assignments():
     # The folder in which all the zipped assignments are, in this folder new folders will be created for each
     # grader and in those folders the assignments will be equaly divided
     target_folder = dir + "/assignments_divided"
+    ALLOWED_FILETYPES = ['zip']
 
     filenames = []
-    for filetype in 'zip':
+    for filetype in ALLOWED_FILETYPES:
         filenames.extend(glob.glob("%s/*.%s" % (target_folder, filetype)))
     num_files = len(filenames)
     num_graders = len(graders)
     files_per_grader = num_files // num_graders
     random.shuffle(filenames)
-    # print(filenames)
+    print(filenames)
 
     print("Creating a random division of %d files over %d graders (%d per grader, %d remainder)" % (
     num_files, num_graders, files_per_grader, num_files % num_graders))
