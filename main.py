@@ -9,7 +9,7 @@ import random
 # You can download all files in the grade center
 
 # Input the directory where the assignments are stored
-dir = 'C:/Users/mathi/lst'
+dir = ''
 
 graders = [
     'Jeroen',
